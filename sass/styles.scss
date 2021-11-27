@@ -1,0 +1,101 @@
+@use 'abstracts/index' as *;
+
+// General Stylesheet
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: $mainBg;
+}
+
+// Card
+main{
+    width: 80%;
+    max-width: 23em;
+    min-height: 100vh;
+    @include gridCenter();
+    margin: 0 auto;
+}
+// Inner
+.card{
+    background-color: $cardBg;
+    padding: 1.3em;
+    border-radius: 1em;
+
+    & > div{
+        margin-bottom: .7em;
+    }
+    .bg-image{
+        border-radius: .5em;
+        height: auto;
+        width: 100%;
+    }
+
+    &__info{
+        h1{
+            color: $White;
+            font-size: 1.5em;
+        }
+        .text{
+            font-size: .9rem;
+            line-height: 1.3em;
+            color: $SoftBlue;
+            font-weight: lighter;
+        }
+    }
+
+    &__info--stats{
+        @include flex(row, space-between);
+        position: relative;
+    
+        .eth{
+            color: $Cyan;
+        }
+        .time{
+            color: $SoftBlue;
+            font-weight: lighter;
+        }
+
+        & > div{
+            @include flex(row, none);
+            gap: .5em;
+        }
+        &::after{
+            content: "";
+            bottom: 0;
+            position: absolute;
+            height: 0.06em;
+            background-color: $SoftBlue;
+            width: 100%;
+            opacity: .3;
+        }
+
+        @media screen and (max-width: 350px) {
+            flex-direction: column;
+        }
+    }
+
+    &__profile{
+        @include flex(row, none);
+        gap: .8em; 
+
+        p{
+            color: $SoftBlue;
+            font-weight: lighter;
+        }
+
+        span{
+            color: $White;
+            cursor: pointer;
+        }
+        .avatar-img{
+            width: 15%;
+            border-radius: 50%;
+            border: 1px solid $White;
+        }
+
+
+    }
+}

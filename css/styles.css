@@ -1,0 +1,98 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
+}
+
+main {
+  width: 80%;
+  max-width: 23em;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #14253d;
+  padding: 1.3em;
+  border-radius: 1em;
+}
+.card > div {
+  margin-bottom: 0.7em;
+}
+.card .bg-image {
+  border-radius: 0.5em;
+  height: auto;
+  width: 100%;
+}
+.card__info h1 {
+  color: white;
+  font-size: 1.5em;
+}
+.card__info .text {
+  font-size: 0.9rem;
+  line-height: 1.3em;
+  color: #8bacda;
+  font-weight: lighter;
+}
+.card__info--stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.card__info--stats .eth {
+  color: #00fff7;
+}
+.card__info--stats .time {
+  color: #8bacda;
+  font-weight: lighter;
+}
+.card__info--stats > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  gap: 0.5em;
+}
+.card__info--stats::after {
+  content: "";
+  bottom: 0;
+  position: absolute;
+  height: 0.06em;
+  background-color: #8bacda;
+  width: 100%;
+  opacity: 0.3;
+}
+@media screen and (max-width: 350px) {
+  .card__info--stats {
+    flex-direction: column;
+  }
+}
+.card__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  gap: 0.8em;
+}
+.card__profile p {
+  color: #8bacda;
+  font-weight: lighter;
+}
+.card__profile span {
+  color: white;
+  cursor: pointer;
+}
+.card__profile .avatar-img {
+  width: 15%;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/*# sourceMappingURL=styles.css.map */

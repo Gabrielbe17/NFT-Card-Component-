@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+// Grid
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+// Flex
+@mixin flex($direction, $justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
